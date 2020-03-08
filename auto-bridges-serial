@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -A cc3uv3p # 2017 XSEDE Applications of Parallel Computing Course Allocation
+#SBATCH -J auto-particle-serial
+#SBATCH -o auto-particle-serial.stdout
+#SBATCH -n 1         
+#SBATCH -p RM
+#SBATCH -t 00:10:00
+#SBATCH -N 1         
+     
+rm serial_sum.txt
+./serial -n 1000 -no -s serial_sum.txt
+./serial -n 2000 -no -s serial_sum.txt
+./serial -n 3000 -no -s serial_sum.txt
+./serial -n 4000 -no -s serial_sum.txt
+./serial -n 5000 -no -s serial_sum.txt
+./serial -n 6000 -no -s serial_sum.txt
+./serial -n 7000 -no -s serial_sum.txt
+./serial -n 8000 -no -s serial_sum.txt
+./serial -n 9000 -no -s serial_sum.txt
+./serial -n 10000 -no -s serial_sum.txt
+./serial -n 11000 -no -s serial_sum.txt
+./serial -n 12000 -no -s serial_sum.txt
+./autograder -v serial -s serial_sum.txt
+
