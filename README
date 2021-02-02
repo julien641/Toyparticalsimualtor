@@ -1,2 +1,7 @@
 Make sure you switch to the GNU compiler with OpenMPI before compiling or
 running MPI jobs.  You can do this by running `source modules.sh`.
+
+School work for parallalization, ran on a super computer. 
+The goal was to optimize the Partical collider.
+For the linear solution I distributed the particle in hash table where the key would be based on their x and ys and would check their surrounding bin
+For the parallel solution i used my orignal solution but to re distribute the particles i used a lock for each bin which majorily improved the performance.
